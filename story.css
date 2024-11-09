@@ -1,0 +1,369 @@
+/* Body styles */
+body {
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  font-family: Arial, sans-serif; /* Set base font */
+  line-height: 1.6; /* Increase line height for better readability */
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+  background-color: #ffffff; /* Set background color */
+  font-size: 19px; /* Set base font size */
+}
+
+header {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("pictures/HSS_logo.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  position: relative;
+}
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
+    120deg,
+    #02aab0 0%,
+    #00cdac 100%
+  );
+  opacity: 0.6;
+  z-index: -1;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
+  margin-bottom: 0.5rem;
+  transform: translateY(-50px);
+  opacity: 0;
+  animation: slideIn 0.5s forwards 0.5s;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* Header button styles */
+header a {
+  background: #00cdac; /* Button background color */
+  color: #fff; /* White text color */
+  font-size: 1.5rem; /* Button text size */
+  padding: 1rem 2rem; /* Padding inside the button */
+  text-decoration: none; /* Remove underline */
+  border-radius: 50px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Button shadow */
+  transform: translateY(50px); /* Initial position for animation */
+  opacity: 0; /* Initially hidden */
+  animation: slideIn 0.5s forwards 0.75s; /* Animation for sliding in */
+}
+header a:hover {
+  background-image: linear-gradient(120deg, #02aab0 0%, #00cdac 100%);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section styles */
+#innledning {
+  background-image: url("pictures/trio.jpg"); /* Background image */
+  background-attachment: fixed; /* Fixed background */
+  background-size: center; /* Cover the entire section */
+  background-repeat: no-repeat; /* Prevent repeating background */
+  background-position: center center; /* Center the background image */
+}
+
+#innledning2 {
+  background-image: url("pictures/ram.jpg"); /* Background image */
+  background-attachment: fixed; /* Fixed background */
+  background-size: center; /* Cover the entire section */
+  background-repeat: no-repeat; /* Prevent repeating background */
+  background-position: center center; /* Center the background image */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Article section styles */
+#artikkelekte {
+  padding: 40px; /* Padding around the content */
+  max-width: 800px; /* Maximum width for the article */
+  margin: 40px auto; /* Center align with margin */
+  background-color: #f5f5f5; /* Light gray background */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Box shadow for depth */
+  border-radius: 10px; /* Rounded corners */
+  font-family: "Arial", sans-serif; /* Set font for the article */
+  line-height: 1.8; /* Increase line height */
+  color: #333; /* Dark gray text color */
+}
+
+#artikkelekte h2 {
+  color: #000000;
+  margin-top: 1em;
+}
+#artikkelekte h3 {
+  color: #6b98eb;
+  margin-top: 4em;
+}
+
+#artikkelekteh3:after {
+  background: #ebc06b;
+}
+
+#artikkelekte p {
+  font-family: "Merriweather", sans-serif;
+  text-align: justify;
+  color: #555;
+  font-size: 19px;
+}
+
+.image-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.player-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border: 3px solid #ebc06b;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.player-image:hover {
+  transform: scale(1.05);
+}
+
+#artikkelekte .video-content {
+  max-width: 100%;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  padding-top: 56.25%;
+  background: #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#artikkelekte .video-content video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#artikkelekte video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+#artikkelekte a {
+  color: #5a2a82;
+  text-decoration: underline;
+  transition: color 0.3s ease-in-out;
+}
+
+#artikkelekte a:hover {
+  color: #ebc06b;
+}
+
+figcaption {
+  margin-top: 8px;
+  font-style: italic;
+  color: rgb(0, 0, 0);
+  text-shadow: #ffffff 1px 1px;
+  text-align: center;
+}
+
+/* Scroll container */
+.scrollContainer {
+  width: 100vw; /* Full width */
+  min-height: 60vh; /* Minimum height */
+  overflow: hidden; /* Hide overflow */
+  transition: background-image 2s; /* Smooth transition for background image */
+}
+
+/* Scroll text styling */
+.containertex {
+  margin: 50vh auto; /* Center the text vertically */
+  max-width: 50rem; /* Max width */
+  padding: 1rem; /* Padding */
+  background: #f2cf8a; /* Background color */
+  color: #000000; /* Text color */
+}
+
+/* Scroll text styling */
+
+main {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  max-width: 900px;
+  margin: 10px auto;
+}
+
+#klubbkart {
+  width: 800px;
+  max-height: 700px;
+  overflow-y: auto;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#klubbkart button {
+  font-size: 0.8em;
+  padding: 5px 10px;
+  margin: 10px 0;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#klubbkart button:hover {
+  background-color: #0056b3;
+}
+
+#klubbkart h3 {
+  font-size: 1em;
+  margin: 0.5em 0;
+}
+
+@media (max-width: 600px) {
+  #klubbkart {
+    width: 100%;
+    max-height: 589px;
+    padding: 10px;
+    text-align: left;
+  }
+
+  #klubbkart button {
+    font-size: 10px;
+    padding: 8px 12px;
+    margin: 5px 0;
+    text-align: left;
+  }
+
+  #klubbkart h3 {
+    font-size: 11px;
+    margin: 0.3em 0;
+    text-align: left;
+  }
+}
+
+footer {
+  clear: both;
+  text-align: center;
+  padding: 1rem 0;
+  background: #f2cf8a;
+  color: #ffffff;
+  width: 100%;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  header a {
+    font-size: 0.8rem;
+  }
+
+  .containertex {
+    width: 90%;
+    padding: 3px;
+  }
+
+  .containertex p {
+    font-size: 16px;
+  }
+
+  .sidebar {
+    font-size: 0.8rem;
+  }
+
+  .player-entry {
+    padding: 0.5rem;
+  }
+
+  .container,
+  .timeline {
+    width: 95%;
+    max-width: 95%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #artikkelekte {
+    max-width: 100%;
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  #artikkelekte h2 {
+    font-size: 20px;
+  }
+
+  #artikkelekte h3 {
+    font-size: 18px;
+  }
+
+  #artikkelekte p {
+    font-size: 16px;
+  }
+
+  #figcaption_smasher {
+    font-size: 16px;
+  }
+
+  figcaption {
+    font-size: 16px;
+  }
+
+  .text-content,
+  .image-content {
+    float: none;
+    width: auto;
+    margin: 20px 0;
+  }
+
+  .image-content img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  footer {
+    padding: 1rem;
+    width: 100%;
+    font-size: 16px;
+  }
+}
